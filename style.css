@@ -1,0 +1,126 @@
+/* Variables, Initializations and Resetting Styles */
+
+:root {
+	/* Colors */
+	--skyblue: #ABEEFE;
+	--button-blue: #1CB0F6;
+	--button-blue-shadow: #1899D6;
+
+	/* Font Weights */
+	--light: 300;
+	--regular: 400;
+	--bold: 700;
+}
+
+@font-face {
+    font-family: "Kabel";
+    src: url("assets/monopoly-font/KabelBook.eot");
+    src: url("assets/monopoly-font/KabelBook.eot?#iefix") format("embedded-opentype"),
+         url("assets/monopoly-font/KabelBook.woff2") format("woff2"),
+         url("assets/monopoly-font/KabelBook.woff") format("woff"),
+         url("assets/monopoly-font/KabelBook.ttf") format("truetype"),
+         url("assets/monopoly-font/KabelBook.svg#KabelBook") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+/** Body **/
+
+body {
+	font-family: "Noto Sans", sans-serif;
+	display: grid;
+	min-height: 100svh;
+	grid-template-rows: 1fr min-content;
+	background-color: var(--skyblue);
+	background-image: url(assets/background.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+}
+
+/** Title **/
+
+.main-title {
+	font-size: 40px;
+	font-family: "Kabel";
+	text-align: center;
+	color: white;
+	background-color: var(--button-blue);
+	padding: 10px;
+	border-bottom: 2px solid white;
+}
+
+/** Main Menu **/
+
+.main {
+	display: grid;
+	grid-template-rows: min-content 1fr;
+	border: 2px solid white;
+	border-bottom: none;
+}
+
+.main-menu {
+	list-style: none;
+	align-self: flex-start;
+	justify-self: center;
+	margin-top: 4vh;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-items: center;
+}
+
+.main-menu__button {
+	text-decoration: none;
+	background-color: var(--button-blue);
+	border-bottom: 8px solid var(--button-blue-shadow);
+	border-radius: 16px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: var(--bold);
+	margin: 10px 0px;
+	padding: 13px 16px;
+	text-align: center;
+	transition: filter 0.2s;
+	width: 100%;
+}
+
+.main-menu__button:hover {
+	filter: brightness(1.1);
+}
+
+.main-menu__button:active {
+	margin-top: 14px;
+	border-bottom: 4px solid var(--button-blue-shadow);
+}
+
+/** Footer **/
+
+.footer {
+	background-color: var(--button-blue);
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	border: 2px solid white;
+}
+
+.footer__text {
+	font-weight: var(--regular);
+}
+
+.footer__link {
+	text-decoration: none;
+	color: inherit;
+	font-weight: var(--bold);
+}
